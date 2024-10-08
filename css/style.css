@@ -1,0 +1,221 @@
+*,
+* ::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62, 5%;
+    /*1 rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 2rem;
+    font-family: "Gowun Batang", serif;
+
+}
+
+/*  naviegatie bar */
+
+
+.nav {
+    background-color: #050C9C;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.nav__img {
+    height: auto;
+    width: auto;
+    margin-left: 4rem;
+    border-radius: 50%;
+}
+
+.nav__list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+.nav__listItem {
+    height: 6rem;
+    display: flex;
+}
+
+.nav__listItem>a {
+    height: 100%;
+    padding: 3rem;
+    text-decoration: none;
+    display: flex;
+    color: #eee;
+    align-items: center;
+    text-align: center;
+}
+
+.nav__listItem>a:hover {
+    background-color: #F5B17B;
+    border-radius: 0.6rem;
+}
+
+.nav__listItem:first-child {
+    margin-right: auto;
+}
+
+
+.menu-button {
+    display: none;
+    margin-right: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* side bar */
+.nav__list__sideBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 25rem;
+    z-index: 999;
+    background-color: #eee;
+    backdrop-filter: blur(1rem);
+    box-shadow: -1rem 0 1rem rgba(255, 255, 255, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style: none;
+    align-items: center;
+
+}
+
+.nav__list__sideBar>.nav__listItem__sideBar {
+    width: 100%;
+    list-style: none;
+}
+
+.nav__list__sideBar>.close-bar {
+    color: #0B192C;
+    justify-content: center;
+    align-items: center;
+    display: flex-start;
+    list-style: none;
+}
+
+.nav__listItem__sideBar>a,
+.nav__listItem__sideBar-mobile>a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    color: #0B192C;
+    list-style: none;
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+/* Home Page */
+
+.homePage__img {
+    height: 100vh;
+
+}
+
+.main__home {
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), 80%, rgba(0, 0, 0, 0.5)), url(../logo/schoolfoto_mbo.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    width: 100%;
+}
+
+.main__text {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #eee;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+}
+
+.main__text>h1 {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    
+}
+
+.main__text > p{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+}
+
+a.main__btn {
+    color: white;
+    background-color: #050C9C;
+    border-radius: 3rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 12px 24px;
+    text-decoration: none;
+    width: fit-content;
+    font-family: "Raleway", sans-serif;
+    font-style: italic;
+
+}
+
+a.main__btn:hover {
+    color: white;
+    background-color: #3ABEF9;
+    background-color: #F5B17B;
+}
+
+
+
+
+
+/* responsive */
+
+@media (max-width:80rem) {
+    .nav__listItem__sideBar {
+        display: none;
+    }
+
+    .nav__listItem-text {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav__list__sideBar {
+        gap: 3rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width:40rem) {
+    .nav__list__sideBar {
+        width: 100%;
+    }
+}
