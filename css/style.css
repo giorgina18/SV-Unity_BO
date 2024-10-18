@@ -27,7 +27,7 @@ body {
 }
 
 .nav__img {
-    height: auto;
+    height: 5.8rem;
     width: auto;
     margin-left: 4rem;
     border-radius: 50%;
@@ -40,8 +40,6 @@ body {
     justify-content: flex-end;
     align-items: center;
 }
-
-
 
 .nav__listItem {
     height: 6rem;
@@ -58,7 +56,7 @@ body {
     text-align: center;
 }
 
-.nav__listItem>a:hover {
+.nav__listItem-text>a:hover {
     background-color: #F5B17B;
     border-radius: 0.6rem;
 }
@@ -422,6 +420,96 @@ a.informatie__btn:hover {
     background-image: linear-gradient(to right, #050C9C, #A7E6FF);
 }
 
+/* evenement slijder */
+
+.evenementen-swiper__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.evenementen-swiper__item {
+    padding: 2rem 0;
+    margin-top: 6rem;
+    text-align: center;
+    display: block;
+}
+
+.evenementen-swiper__item a {
+    text-decoration: none;
+}
+
+.evenementen-swiper__title {
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #0B192C;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+}
+
+.evenementen-swiper__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+
+.evenementen-swiper__img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+.swiper-button-next {
+    color: #3ABEF9;
+    border-radius: 50%;
+    border: 3px solid #050C9C;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-prev {
+    color: #3ABEF9;
+    border-radius: 50%;
+    border: 3px solid #050C9C;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.evenementen-swiper__shortDesc p {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 20;
+}
+
+.evenementen-swiper__cta {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    color: #050C9C;
+    padding: 0.6rem;
+    border: 1px solid rgba(0, 0, 0, 0);
+    text-align: center;
+    display: block;
+}
+
+.evenementen-swiper__cta:hover {
+    cursor: pointer;
+    border: 1px solid #0B192C;
+    border-radius: 1rem;
+}
+
+
 
 /* responsive */
 
@@ -507,9 +595,10 @@ a.informatie__btn:hover {
     }
 
 
-    .gender-title{
+    .gender-title {
         margin-left: 1rem;
     }
+
     .gender-category {
         display: flex;
         justify-content: space-between;
@@ -520,6 +609,30 @@ a.informatie__btn:hover {
     .content::-webkit-scrollbar {
         width: 5;
     }
+
+    /* evenement slijder responsive */
+
+    .evenementen-swiper__container {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+
+    .evenementen-swiper__img {
+        height: 20rem;
+    }
+
+    .evenementen-swiper__title {
+        font-size: 1.8rem;
+    }
+
+    .evenementen-swiper__shortDesc p {
+        font-size: 1.2rem;
+    }
+
+    .evenementen-swiper__cta {
+        font-size: 1.2rem;
+    }
+
 
 }
 
@@ -586,7 +699,7 @@ a.informatie__btn:hover {
         margin-left: 1rem;
     }
 
-    .gender-title{
+    .gender-title {
         margin-left: 1rem;
     }
 
