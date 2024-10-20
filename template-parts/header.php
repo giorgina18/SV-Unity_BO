@@ -29,7 +29,7 @@ require_once($rootDir . '/includes/main.php');
 <body>
     <nav class="nav">
         <ul class="nav__list">
-            <li  class="nav__listItem"> <a href="<?= CustomFunctions::getRootUrl(); ?>"><img class="nav__img" src="logo/sv-unity-logo.png" alt=""></a></li>
+            <li  class="nav__listItem"> <a href="<?= CustomFunctions::getRootUrl(); ?>"><img class="nav__img" src="<?= CustomFunctions::getRootUrl(); ?>logo/sv-unity-logo.png" alt=""></a></li>
             <li class="nav__listItem nav__listItem-text"> <a href="#">Over ons</a></li>
             <li class="nav__listItem nav__listItem-text"> <a href="#">Informatie</a></li>
             <li class="nav__listItem nav__listItem-text"> <a href="#">Contact</a></li>

@@ -33,11 +33,8 @@ if (!empty($rows)):
                             <div class="evenementen-swiper__item">
                                 <h2 class="evenementen-swiper__title"><?= $row['title']; ?></h2>
                                 <img src="<?php echo $image; ?>" alt="<?= $row['title']; ?>" class="evenementen-swiper__img">
-                                <p class="evenementen-swiper__shortDesc">Kom en geniet van een nacht vol muziek, kleur en energie! Dans samen onder de sterren,
-                                    laat je meevoeren door de beats en ervaar de magie van dit festival. <br>Dit wil je niet missen!
-                                </p>
+                                <p class="evenementen-swiper__shortDesc"> <?= $short_desc ?></p>
                                 <a href="evenement.php?id=<?= $id; ?>" class="evenementen-swiper__cta">Bekijk evenement</a>
-
                             </div>
                           
                         </div>

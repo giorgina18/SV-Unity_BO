@@ -11,7 +11,7 @@ require_once 'template-parts/header.php';
                 Meld je
                 hier onder aan voor exclusieve updates!
             </p>
-            <a href="#" class="main__btn">Meld je aan!</a>
+            <a href="./registratie/registratie.php" class="main__btn">Meld je aan!</a>
         </div>
     </section>
     
@@ -29,7 +29,7 @@ require_once 'template-parts/header.php';
                 Ook bouwen wij deze vereniging op<br> met als doel om zo veel als mogelijk studenten van het MBO bij
                 elkaar te brengen om zo het mbo gelijk te trekken met het HBO en WO.
             </h6>
-            <a href="#" class="informatie__btn">Klik hier voor meer informatie!</a>
+            <a href="./information/information.php" class="informatie__btn">Klik hier voor meer informatie!</a>
 
         </div>
         <div class="info__img">
@@ -38,7 +38,7 @@ require_once 'template-parts/header.php';
     </section>
 
     <!-- inschrijf formulier -->
-
+<!-- 
     <div class="container">
         <form action="" method="post">
             <h2>registratie</h2>
@@ -85,7 +85,7 @@ require_once 'template-parts/header.php';
                 <button type="submit">registratie</button>
             </div>
         </form>
-    </div>
+    </div> -->
     <?php
 require_once 'template-parts/footer.php';
 ?>

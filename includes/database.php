@@ -1,11 +1,13 @@
 <?php
 
-class Database {
+class Database
+{
     private static $connection = null;
     private $table;
 
     // Static method to establish and return the database connection
-    public static function connection() {
+    public static function connection()
+    {
         // Check if the connection is already established
         if (self::$connection === null) {
             // Load environment variables from .env file
@@ -29,7 +31,8 @@ class Database {
     }
 
     // Load .env file from the parent folder and return associative array of environment variables
-    private static function loadEnv() {
+    private static function loadEnv()
+    {
         // Change this to the correct path to the .env file (in the parent directory)
         $envFile = __DIR__ . '/../.env';  // Accessing .env in the parent directory
 
@@ -58,16 +61,41 @@ class Database {
     }
 
     // Method to set the table name
-    public function setTable($tableName) {
+    public function setTable($tableName)
+    {
         $this->table = $tableName;
     }
 
     // Method to fetch all rows from the set table
-    public function fetchAllRows() {
+    public function fetchAllRows()
+    {
         $connection = self::connection();  // Get the connection
         $query = "SELECT * FROM {$this->table}";  // Use the table name dynamically
         $statement = $connection->prepare($query);
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+    // Method to fetch a single row by its ID
+    public function fetchRowById($id)
+    {
+        // Ensure we have the table name set
+        if (empty($this->table)) {
+            throw new Exception("Table not set. Use setTable() to set the table name.");
+        }
+
+        // Fetch the connection
+        $connection = self::connection();
+
+        // Prepare the query to fetch the row by ID
+        $query = "SELECT * FROM {$this->table} WHERE id = :id LIMIT 1"; // Use a prepared statement to prevent SQL injection
+        $statement = $connection->prepare($query);
+        $statement->bindParam(':id', $id, PDO::PARAM_INT);  // Bind the ID as an integer
+
+        // Execute the query
+        $statement->execute();
+
+        // Fetch the row (use fetch() instead of fetchAll() since we expect a single row)
+        return $statement->fetch(PDO::FETCH_ASSOC);
     }
 }
