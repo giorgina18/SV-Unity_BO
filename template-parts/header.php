@@ -31,7 +31,7 @@ require_once($rootDir . '/includes/main.php');
         <ul class="nav__list">
             <li  class="nav__listItem"> <a href="<?= CustomFunctions::getRootUrl(); ?>"><img class="nav__img" src="<?= CustomFunctions::getRootUrl(); ?>logo/sv-unity-logo.png" alt=""></a></li>
             <li class="nav__listItem nav__listItem-text"> <a href="#">Over ons</a></li>
-            <li class="nav__listItem nav__listItem-text"> <a href="#">Informatie</a></li>
+            <li class="nav__listItem nav__listItem-text"> <a href="information/information.php">Informatie</a></li>
             <li class="nav__listItem nav__listItem-text"> <a href="#">Contact</a></li>
             <li class="nav__listItem nav__listItem-text"> <a href="<?= CustomFunctions::getRootUrl(); ?>evenementen.php">Evenementen</a></li>
             <li class="menu-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40"

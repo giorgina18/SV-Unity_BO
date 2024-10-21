@@ -200,7 +200,7 @@ a.main__btn:hover {
 
 .informatie__text {
     gap: 20px;
-    color: #000000;
+    color: #0B192C;
     font-family: "Lato", sans-serif;
     font-style: normal;
     width: 50%;
@@ -562,18 +562,68 @@ a.informatie__btn:hover {
 
 
 /* informatie pagina */
+
 .information {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), 80%, rgba(0, 0, 0, 0.5)), url(../logo/groep_mensen.jpg);
+    box-shadow: inset 0 1rem 2rem 0 rgba(53, 34, 193, 0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
-.information__title {}
+.information__title {
+    margin-top: 3rem;
+    color: #0B192C;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    width: 100%;
+    text-align: center;
+    color: #3ABEF9;
+    padding: 1rem;
+}
 
-.information__kopje {}
+.information__kopje {
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    width: 100%;
+    font-size: 110%;
+    text-align: center;
+    color: #A7E6FF;
 
-.information__text {}
+}
 
-.information__text-alinea {}
+.information__text {
+    display: flex;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    margin-top: 0.5rem;
+    width: 100%;
+    color: #0B192C;
+    flex-direction: column;
+    text-align: center;
+    color: #eee;
+    font-size: 80%;
+    padding: 2rem;
+}
+
+.information__text-alinea {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-size: 115%;
+    color: #3ABEF9;
+
+}
+
 
 /* responsive */
 
