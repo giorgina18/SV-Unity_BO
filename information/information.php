@@ -13,9 +13,6 @@ require_once '../template-parts/header.php';
         <a class="information__text-alinea" href=""> Ondersteuning bij Stageplekken en Banen:</a> De vereniging biedt hulp aan studenten bij het vinden van stageplaatsen en banen door middel van workshops,
         <a class="information__text-alinea" href=""> netwerkevenementen en samenwerking met bedrijven.</a> Dit helpt studenten hun carrière op te bouwen en een goede start te maken op de arbeidsmarkt.<br> Ook kunnen studenten uiteindelijk op de website/platform van S.V. Unity terecht voor directe connecties met bedrijven en vinden zij hier vacatures voor stageplekken en banen.
     </h5>
-    <!-- <div class="info__img">
-     <img class="information__img" src="../logo/groep_mensen.jpg" alt="">
-     </div> -->
     </div>
 </section>
 
