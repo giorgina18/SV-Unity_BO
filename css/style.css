@@ -634,6 +634,7 @@ a.informatie__btn:hover {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2rem;
 }
 
 .footer__img {
