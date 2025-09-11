@@ -50,9 +50,9 @@ if (!empty($rows)):
             </div>
         </div>
     </section>
-
-
-<?php
+    
+    
+    <?php
 endif;
 require_once 'template-parts/footer.php';
 ?>
