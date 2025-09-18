@@ -1,19 +1,20 @@
 <?php
 require_once '../template-parts/header.php';
-require_once 'db.php'; 
+require_once 'db.php';
 
 
 
-if (isset($_POST['name']) && !empty($_POST['name'])) {
-    $fullname = $_POST['name'];
-    $username = (isset($_POST['uname']) && !empty($_POST['uname']) ? htmlspecialchars( $_POST['uname']) : null);
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $password = $_POST['password'];
-    $confirmPassword = $_POST['confirmPassword'];
-    $gender = $_POST['gender'] ?? '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $fullname = !empty($_POST['name']) ? htmlspecialchars($_POST['name']) : null;
+    $username = !empty($_POST['uname']) ? htmlspecialchars($_POST['uname']) : null;
+    $email = !empty($_POST['email']) ? htmlspecialchars($_POST['email']) : null;
+    $phone = !empty($_POST['phone']) ? htmlspecialchars($_POST['phone']) : null;
+    $password = !empty($_POST['password']) ? $_POST['password'] : null;
+    $confirmPassword = !empty($_POST['confirmPassword']) ? $_POST['confirmPassword'] : null;
+    $gender = !empty($_POST['gender']) ? htmlspecialchars($_POST['gender']) : null;
 
-    // kijk of de wachtwoorden gelijk zijn
+
+    // kijkt of de wachtwoorden gelijk zijn
     if ($password !== $confirmPassword) {
         $error = "Wachtwoorden komen niet overeen!";
     } else {
