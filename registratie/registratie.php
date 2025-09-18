@@ -2,7 +2,11 @@
 require_once '../template-parts/header.php';
 require_once 'db.php';
 
-
+// functie voor password hashing
+function encrypt_password($password)
+{   
+    return password_hash($password, PASSWORD_BCRYPT);
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fullname = !empty($_POST['name']) ? htmlspecialchars($_POST['name']) : null;
@@ -18,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($password !== $confirmPassword) {
         $error = "Wachtwoorden komen niet overeen!";
     } else {
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         try {
             $stmt = $conn->prepare("INSERT INTO registratie (fullname, username, email, phone, password, gender) 
@@ -28,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':username' => $username,
                 ':email' => $email,
                 ':phone' => $phone,
-                ':password' => $hashedPassword,
+                ':password' => encrypt_password($password),
                 ':gender' => $gender
             ]);
 
